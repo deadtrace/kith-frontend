@@ -1,0 +1,549 @@
+html,
+body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --main-color: #0680C2;
+    --gray: #707070;
+}
+
+:focus {
+    outline: none;
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url("./assets/fonts/Montserrat-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Intro;
+    src: url("./assets/fonts/Intro-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Intro Book;
+    src: url("./assets/fonts/Intro-Book.otf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Intro Light;
+    src: url("./assets/fonts/Intro-Light.otf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: Intro Caps;
+    src: url("./assets/fonts/Intro-Caps.otf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+.productname {
+    font-family: Montserrat;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.space-between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.Vue-Toastification__container.my-container-class .Vue-Toastification__toast {
+    background-color: white;
+    color: var(--main-color);
+    font-family: Intro;
+    border-radius: 21px;
+    border: none;
+    box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.1);
+}
+
+.Vue-Toastification__container.my-container-class .Vue-Toastification__toast-body {
+    text-align: center;
+}
+
+.Vue-Toastification__container.my-container-class .Vue-Toastification__toast--error {
+    color: rgba(254, 74, 73, 0.9);
+}
+
+.Vue-Toastification__container.my-container-class .Vue-Toastification__toast--error .Vue-Toastification__progress-bar {
+    background-color: rgba(254, 74, 73, 0.3);
+}
+
+.category-input-container .multiselect__tags {
+    background-color: #075e8d;
+    border: none;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.category-input-container .multiselect {
+    box-sizing: border-box;
+}
+
+.category-input-container .multiselect__single {
+    margin-bottom: 0px;
+    background-color: #075e8d;
+    color: white;
+}
+
+@media(max-width: 768px) {
+    .category-input-container .multiselect__tags {
+        border-radius: 10px;
+    }
+}
+
+.category-input-container .multiselect__select::before {
+    border-color: white transparent transparent
+}
+
+.main .multiselect__select {
+    height: 36px;
+}
+
+.main .multiselect__placeholder {
+    margin: 0;
+    padding: 0;
+    color: white;
+    opacity: 0.5;
+    font-size: 16px;
+}
+
+.category-input-container .multiselect__tags {
+    min-height: unset;
+    max-height: 36px;
+    height: 36px;
+}
+
+.main .multiselect__tags {
+    padding: 8px 40px 0 20px;
+}
+
+.category-input-container .multiselect__option {
+    background: #075e8d;
+    color: white;
+}
+
+.category-input-container .multiselect__option--highlight {
+    background: white;
+    color: var(--main-color);
+}
+
+.main .multiselect__content-wrapper {
+    border: none;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.main .multiselect__content-wrapper {
+    z-index: 15000;
+    position: absolute;
+    overflow-x: hidden;
+}
+
+.main .slider-item {
+    z-index: 1 !important;
+}
+
+.main .multiselect__single {
+    padding-left: 0;
+}
+
+.category-block .multiselect .multiselect__single {
+    color: black;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.category-block .multiselect__option--highlight {
+    background: var(--main-color);
+    color: white;
+}
+
+.category-block .multiselect__placeholder {
+    color: black;
+    opacity: 0.5;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.geography .multiselect__select {
+    height: 100%;
+}
+
+.geography .multiselect__tags {
+    border: none;
+    padding: 0px 40px 0px 13px;
+    display: flex;
+    align-items: center;
+}
+
+.geography .multiselect__single {
+    margin-bottom: 0px;
+    color: black;
+    font-size: 13px;
+}
+
+.geography .multiselect__select::before {
+    border-color: black transparent transparent
+}
+
+.geography .multiselect__placeholder {
+    color: black;
+    opacity: 0.5;
+    font-size: 13px;
+}
+
+.main .multiselect--disabled .multiselect__select {
+    background: transparent;
+}
+
+.geography .multiselect__input {
+    margin-bottom: 0px;
+    padding: 0px;
+    font-size: 13px;
+}
+
+.geography .multiselect__input::placeholder {
+    font-size: 13px;
+    color: black;
+    opacity: 0.5;
+}
+
+.geography .multiselect__content-wrapper {
+    box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.1);
+}
+
+.geography .multiselect__element {
+    font-size: 13px;
+}
+
+.geography .multiselect__option--highlight {
+    background-color: var(--main-color);
+}
+
+.geography .multiselect__option--selected.multiselect__option--highlight {
+    background: var(--main-color) !important;
+}
+
+.header-md .header-lower-line .multiselect__tags {
+    background-color: #075e8d;
+    border: none;
+    padding: 0px 40px 0px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.header-md .header-lower-line .multiselect--disabled {
+    background-color: transparent;
+}
+
+.header-md .header-lower-line .multiselect__select::before {
+    border-color: white transparent transparent
+}
+
+.header-md .header-lower-line .multiselect__element {
+    background: #075e8d;
+    color: white;
+}
+
+.header-md .header-lower-line .multiselect__option--highlight {
+    background: white;
+    color: var(--main-color);
+}
+
+.header-md .header-lower-line .multiselect__input {
+    padding: 0px;
+    margin: 0px;
+    background: transparent;
+    color: white;
+}
+
+.header-md .header-lower-line .multiselect__single {
+    background: transparent;
+    padding: 0px;
+    margin: 0px;
+    color: white;
+}
+
+.header-md .header-lower-line .multiselect__input::placeholder {
+    color: white;
+    opacity: 0.5;
+}
+
+.header-md .input-container-country {
+    min-width: 180px;
+    max-width: 180px;
+}
+
+.header-md .input-container-region {
+    min-width: 220px;
+    max-width: 220px;
+}
+
+.header-md .input-container-city {
+    min-width: 180px;
+    max-width: 180px;
+}
+
+.header-md .input-container-country .multiselect__tags {
+    border-radius: 10px 0px 0px 10px;
+    border-right: 1px solid var(--main-color);
+}
+
+.header-md .input-container-region .multiselect__tags {
+    border-radius: 0px;
+    border-right: 1px solid var(--main-color);
+}
+
+.header-md .input-container-city .multiselect__tags {
+    border-radius: 0px 10px 10px 0px;
+}
+
+/* header-sm */
+
+.header-sm .geography .multiselect__tags {
+    background-color: #075e8d;
+    border: none;
+    padding: 0px 40px 0px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.header-sm .geography .multiselect--disabled {
+    background-color: transparent;
+}
+
+.header-sm .geography .multiselect__select::before {
+    border-color: white transparent transparent
+}
+
+.header-sm .geography .multiselect__element {
+    background: #075e8d;
+    color: white;
+}
+
+.header-sm .geography .multiselect__option--highlight {
+    background: white;
+    color: var(--main-color);
+}
+
+.header-sm .geography .multiselect__input {
+    padding: 0px;
+    margin: 0px;
+    background: transparent;
+    color: white;
+}
+
+.header-sm .geography .multiselect__single {
+    background: transparent;
+    padding: 0px;
+    margin: 0px;
+    color: white;
+}
+
+.header-sm .geography .multiselect__input::placeholder {
+    color: white;
+    opacity: 0.5;
+}
+
+.header-sm .geography .multiselect__placeholder {
+    color: white;
+    opacity: 0.5;
+}
+
+.header-sm .geography-country {
+    min-width: 180px;
+}
+
+.header-sm .geography-region {
+    min-width: 220px;
+}
+
+.header-sm .geography-city {
+    min-width: 180px;
+}
+
+.header-sm .geography .multiselect__tags {
+    border-radius: 10px;
+}
+
+.header-sm .geography .multiselect__single,
+.header-sm .geography .multiselect__placeholder,
+.header-sm .geography .multiselect__input::placeholder,
+.header-sm .geography .multiselect__input {
+    font-size: 16px;
+}
+
+.main .slider-btn {
+    z-index: 10 !important;
+}
+
+.filter-circle-input-slot .multiselect__tags {
+    border-radius: 7px;
+    box-shadow: 0px 6px 9px rgba(0, 0, 0, 0.16);
+    border: none;
+    padding: 0px 40px 0px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.filter-circle-input-slot .multiselect__single {
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.filter-circle-input-slot .multiselect__input {
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.filter-circle-input-slot .multiselect__option--highlight {
+    background: var(--main-color);
+    color: white;
+}
+
+.filter-circle-input-slot .multiselect__option--selected.multiselect__option--highlight {
+    background: var(--main-color) !important;
+}
+
+.geography-registration .multiselect__tags {
+    border: none;
+    border-radius: 7px;
+    box-shadow: 0px 6px 9px rgba(0, 0, 0, 0.06);
+    display: flex;
+    align-items: center;
+    padding: 0px 40px 0px 15px;
+}
+
+.geography-registration .multiselect__single {
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.geography-registration .multiselect__input {
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.geography-registration .multiselect__placeholder {
+    color: black;
+    opacity: 0.5;
+    margin: 0;
+    padding: 0;
+}
+
+.geography-registration .multiselect__input::placeholder {
+    color: black;
+    opacity: 0.5;
+    margin: 0;
+    padding: 0;
+}
+
+.geography-registration .multiselect__option--highlight {
+    background: var(--main-color);
+    color: white;
+}
+
+.geography-registration .multiselect__option--selected.multiselect__option--highlight {
+    background: var(--main-color) !important;
+}
+
+.geography-registration .multiselect__select {
+    height: 100%;
+}
+
+.geography-registration {
+    min-width: 200px;
+    max-width: 200px;
+}
+
+.geography-registration .multiselect__single,
+.geography-registration .multiselect__input,
+.geography-registration .multiselect__input::placeholder,
+.geography-registration .multiselect__option,
+.geography-registration .multiselect__placeholder {
+    font-size: 9px;
+}
+
+.geography-registration .multiselect__tags {
+    min-height: 30px;
+    max-height: 30px;
+}
+
+.geography-registration .multiselect--disabled {
+    background: transparent;
+
+}
+
+.geography-registration .multiselect {
+    max-height: 30px;
+    min-height: auto;
+}
+
+.geography-registration .multiselect__select {
+    max-height: 30px;
+}
+
+@media (min-width: 1200px) {
+    .geography-registration .multiselect {
+        max-height: 45px;
+        min-height: 40px;
+    }
+
+    .geography-registration .multiselect__select {
+        max-height: unset;
+    }
+
+    .geography-registration {
+        min-width: 284px;
+        max-width: 284px;
+    }
+
+    .geography-registration .multiselect__tags {
+        min-height: 45px;
+        max-height: auto;
+        padding: 0px 40px 0px 23px;
+    }
+
+    .geography-registration .multiselect__single,
+    .geography-registration .multiselect__input,
+    .geography-registration .multiselect__input::placeholder,
+    .geography-registration .multiselect__option,
+    .geography-registration .multiselect__placeholder {
+        font-size: 14px;
+    }
+}
+
+.header-sm .category-input-container .multiselect__tags {
+    padding: 0px 40px 0px 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* .category-input-container .multiselect__tags {
+    background-color: #075e8d !important;
+} */
